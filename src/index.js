@@ -38,15 +38,6 @@ class SmartCalculator {
   }
 
   pow(number) {
-    //  Решение на 65%
-    /*
-    if (number > 1 ) {
-      this.v = '(' + this.v + ')';
-      for (let i = 0; i < number; i++) {
-        this.v += '*(' + this.v + ')';
-      }
-    }
-    */
 
     //  Новое решение
     let new_last_num = this.lastNum;
@@ -61,7 +52,6 @@ class SmartCalculator {
     }
 
     this.lastNum = new_last_num;
-    // this.lastPow = this.lastPow > 1 || !this.lastPow ? number : this.lastPow;
     
     return this;
   }
