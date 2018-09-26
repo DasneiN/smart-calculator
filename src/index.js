@@ -1,15 +1,10 @@
 class SmartCalculator {
   constructor(initialValue) {
     this.v = initialValue;
-    this.lastNum = 0;
+    this.lastNum = initialValue;
   }
 
-  toString() {
-    console.log(this.v);
-    console.log('===');
-    console.log(eval(this.v));
-    
-    
+  toString() {    
     return eval(this.v);
   }
 
@@ -49,9 +44,13 @@ class SmartCalculator {
     */
 
     //  Новое решение
+    let new_last_num = this.lastNum;
     for (let i = 1; i < number; i++) {
       this.v += '*' + this.lastNum;
+      new_last_num += '*' + this.lastNum;
     }
+
+    this.lastNum = new_last_num;
     
     return this;
   }
